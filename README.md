@@ -1,4 +1,4 @@
-# stoic-quotes
+# Stoic Quotes
 
 A stoic quote generator app made using JQuery
 
