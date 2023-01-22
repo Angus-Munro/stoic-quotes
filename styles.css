@@ -1,0 +1,228 @@
+/* || Variables */
+
+:root {
+	--main-font-family: "Raleway", sans-serif;
+	--main-text-color: #0a0a0a;
+	--accent-text-color: #faf9f6;
+	--main-bg-color: #faf9f6;
+	--accent-bg-color: #4f6fd4;
+	--utility-bg-color: rgb(65, 60, 60);
+}
+
+/* || Basic Styles */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-family: var(--main-font-family);
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: var(--main-text-color);
+}
+
+/* || Custom Styles */
+
+/* || Full page */
+
+.page {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--main-bg-color);
+}
+
+/* || Header and Navigation */
+
+.nav-list {
+	display: flex;
+	overflow: hidden;
+}
+
+.nav-list__item-img {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.header {
+	margin: 1rem auto;
+}
+
+.header__title {
+	font-weight: 600;
+}
+
+/* || Main section*/
+
+/* || Button Section */
+
+.button-section {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.button {
+	cursor: pointer;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+.button:focus-visible {
+	outline: none;
+}
+
+.button-section__generate-button {
+	background-color: var(--accent-bg-color);
+	color: var(--accent-text-color);
+	padding: 0.25em;
+	font-size: 1.5rem;
+	font-family: var(--main-font-family);
+}
+
+.button-section__copy-button {
+	position: relative;
+	display: flex;
+	gap: 0.25em;
+	background-color: var(--accent-bg-color);
+	color: var(--accent-text-color);
+	padding: 0.25em;
+	font-size: 1.5rem;
+	font-family: var(--main-font-family);
+}
+
+.tooltip__text {
+	font-size: 1rem;
+	width: 12rem;
+	border-radius: 1px;
+	visibility: hidden;
+	background-color: var(--utility-bg-color);
+	color: var(--accent-text-color);
+	text-align: center;
+	padding: 0.25em;
+	position: absolute;
+	z-index: 1;
+	top: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip__text::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent var(--utility-bg-color) transparent;
+}
+
+.button-section__copy-button:hover .tooltip__text {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* || Quote Generator */
+
+.main {
+	margin-top: 1rem;
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.quote-generator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.quote-generator__content {
+	border-top: 4px solid var(--main-text-color);
+	border-bottom: 4px solid var(--main-text-color);
+	margin-top: 3rem;
+	padding: 1rem 0;
+	min-height: 12rem;
+	max-width: 48rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	text-align: center;
+}
+
+.quote-generator__text {
+	font-size: 1.25rem;
+	padding-bottom: 0.5rem;
+	max-width: 40ch;
+}
+
+.quote-generator__author {
+	font-size: 1.5rem;
+}
+
+/* || Footer */
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	align-self: center;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.footer__portfolio-link {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+	margin-bottom: 0.5rem;
+	text-decoration: underline 1.5px;
+}

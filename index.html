@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>StoicQuotes</title>
+	</head>
+	<body>
+		<div class="page">
+			<nav>
+				<ul class="nav-list">
+					<li class="nav-list__item">
+						<a href="#"
+							><img
+								class="nav-list__item-img"
+								src="img/aurelius-statue.png"
+								alt="Icon of bust of Marcus Aurelius"
+						/></a>
+					</li>
+
+					<!-- <a class="header__nav-item header__nav-item--text" href="#">API</a> -->
+				</ul>
+			</nav>
+
+			<header class="header">
+				<h1 class="header__title">StoicQuotes</h1>
+			</header>
+
+			<main class="main">
+				<div class="quote-generator">
+					<div class="button-section">
+						<button class="button-section__generate-button button">
+							Generate quote
+						</button>
+						<button class="button-section__copy-button button">
+							Copy quote
+							<!-- <img
+								class="button-section__copy-icon"
+								src="img/copy.png"
+								alt="Copy Text"
+							/> -->
+							<span class="tooltip__text">Copy to clipboard</span>
+						</button>
+					</div>
+
+					<div class="quote-generator__content">
+						<p class="quote-generator__text"></p>
+						<p class="quote-generator__author"></p>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<p class="footer__credit">Developed by Angus Munro</p>
+				<a class="footer__portfolio-link" href="#">Portfolio Site</a>
+			</footer>
+
+			<!-- Scripts -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			<script src="dist/clipboard.min.js"></script>
+			<script src="script.js"></script>
+		</div>
+	</body>
+</html>
